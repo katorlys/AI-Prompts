@@ -20,7 +20,7 @@ jobs:
         uses: cl8dep/action-discord@0.1
         with:
           webhook: ${{ secrets.DISCORD_KEEPALIVE_WEBHOOK }}
-          message: '@UltimateGPT#6241 Hello! @ImageryGG#1032 Hi!'
+          message: ${{ secrets.DISCORD_PING_MESSAGE }}
       # Prevent workflow from being disabled after 60 days of inactivity of the current repository.
       - name: Keep Github workflow alive
         uses: gautamkrishnar/keepalive-workflow@v1
