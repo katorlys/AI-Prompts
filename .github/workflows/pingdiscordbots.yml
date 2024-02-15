@@ -12,12 +12,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Update this repo's README with recent activity
+    name: Keep AI Bots developed by Katorly Lab alive on Discord
 
     steps:
       - uses: actions/checkout@v2.5.0
       - name: Ping AI chat bots on Katorly Lab Discord
-        uses: cl8dep/action-discord@v0
+        uses: cl8dep/action-discord@v0.1
         with:
           webhook: ${{ secrets.DISCORD_KEEPALIVE_WEBHOOK }}
           message: '@UltimateGPT#6241 Hello! @ImageryGG#1032 Hi!'
