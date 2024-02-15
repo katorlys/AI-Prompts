@@ -1,0 +1,26 @@
+# Keep AI Bots Alive on Discord
+#   If no users interact with a bot in Discrod for more than a week, the bot will automatically go offline.
+#   This Github workflow automatically pings the AI chat bots developed by Katorly Lab every Sunday and Wednesday in the Katorly Lab Discord server to prevent them going offline.
+
+name: "Keep AI Bots Alive on Discord"
+on:
+  schedule:
+    # Run at 16:00 every Sunday and Wednesday.
+    - cron: '0 16 * * 0,4'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Update this repo's README with recent activity
+
+    steps:
+      - uses: actions/checkout@v2.5.0
+      - name: Ping AI chat bots on Katorly Lab Discord
+        uses: cl8dep/action-discord@v0
+        with:
+          webhook: ${{ secrets.DISCORD_KEEPALIVE_WEBHOOK }}
+          message: '@UltimateGPT#6241 Hello! @ImageryGG#1032 Hi!'
+      # Prevent workflow from being disabled after 60 days of inactivity of the current repository.
+      - name: Keep Github workflow alive
+        uses: gautamkrishnar/keepalive-workflow@v1
