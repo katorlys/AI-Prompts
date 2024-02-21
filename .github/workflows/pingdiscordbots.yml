@@ -16,11 +16,23 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2.5.0
+      # Store them in Github Repository Secrets to make them easy to change
+      # Use format `@<Bot user ID> Hello!` to ping the bot (Do not remove the "<" ">"), or else the message will be plain text
       - name: Ping AI chat bots on Katorly Lab Discord
         uses: cl8dep/action-discord@0.1
         with:
-          webhook: ${{ secrets.DISCORD_KEEPALIVE_WEBHOOK }}
-          message: ${{ secrets.DISCORD_PING_MESSAGE }}
+          webhook: ${{ secrets.DISCORD_WEBHOOK_CHAT }}
+          message: ${{ secrets.DISCORD_PING_ULTIMATEGPT }}
+      - name: Ping AI chat bots on Katorly Lab Discord
+        uses: cl8dep/action-discord@0.1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK_DRAW }}
+          message: ${{ secrets.DISCORD_PING_IMAGERYGG }}
+      - name: Ping AI chat bots on Katorly Lab Discord
+        uses: cl8dep/action-discord@0.1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK_CODE }}
+          message: ${{ secrets.DISCORD_PING_CODINGGG }}
       # Prevent workflow from being disabled after 60 days of inactivity of the current repository.
       - name: Keep Github workflow alive
         uses: gautamkrishnar/keepalive-workflow@v1
