@@ -5,19 +5,20 @@
 
 
 ## Start using
-- CiciAI: https://www.ciciai.com/share?botId=7335482882515025928
-- Discord: https://discord.com/api/oauth2/authorize?client_id=1207549065777119233&permissions=412317243456&scope=bot
-- Telegram: https://t.me/imagerygg_bot
-- Slack: https://slack.com/oauth/v2/authorize?client_id=6674412069648.6667020062865&scope=app_mentions:read,channels:history,chat:write,commands,groups:history,im:history,mpim:history,users:read&user_scope=&state=A06KM0L1URF
+Start using ImageryGG for free, with no limitations and no extra fees.  
+- <img src="https://www.google.com/s2/favicons?sz=64&domain=ciciai.com" width="13rem"> [Chat in CiciAI](https://www.ciciai.com/share?botId=7335482882515025928)
+- <img src="https://www.google.com/s2/favicons?sz=64&domain=discord.com" width="13rem"> [Add to Discord](https://discord.com/api/oauth2/authorize?client_id=1207549065777119233&permissions=412317243456&scope=bot)
+- <img src="https://www.google.com/s2/favicons?sz=64&domain=telegram.org" width="13rem"> [Chat or add in Telegram](https://t.me/imagerygg_bot)
+- <img src="https://www.google.com/s2/favicons?sz=64&domain=slack.com" width="13rem"> [Add to Slack](https://slack.com/oauth/v2/authorize?client_id=6674412069648.6667020062865&scope=app_mentions:read,channels:history,chat:write,commands,groups:history,im:history,mpim:history,users:read&user_scope=&state=A06KM0L1URF)
 
 
 ## Examples
 ### Character
-**input**:  
+**input:**  
 ```text
 {1girl}, {{solo}}, sitting_on_the_floor, brown_hair, long_hair, hair_loosely, yellow_eyes, {dark_boob_tube_top}, {{crop_top}}, long_sleeves, {navel}, dark_minidress, white_kneehighs, pure_white_socks, silk_sockings, {white_long_silk_sockings}, long_socks, thin_long_socks, white_sneakers, full_body, manga_style, best_quality
 ```
-**output**:  
+**output:**  
 ![](/ImageryGG/img/example_1_3.png)  
 <details><summary>more</summary>
 
@@ -26,11 +27,11 @@
 </details>
 
 ### Food
-**input**:  
+**input:**  
 ```text
 pan_cake, wafery, {4layer}, cover_chocolate, maple_syrup, steaming_hot, delicious, white_plate, table, spoon, fork, table_cover_beige_cloth, dark_brown_background, best_quality
 ```
-**output**:  
+**output:**  
 ![](/ImageryGG/img/example_2_2.png)  
 <details><summary>more</summary>
 
@@ -39,24 +40,19 @@ pan_cake, wafery, {4layer}, cover_chocolate, maple_syrup, steaming_hot, deliciou
 </details>
 
 ### Landscape
-With image link  
-<img src=https://images.unsplash.com/photo-1421790500381-fc9b5996f343 width="200">
-
-**input**:  
+**input:**  
 ```text
 landscape, https://images.unsplash.com/photo-1421790500381-fc9b5996f343, wooden_cottage, no_people, natural_beauty, in_spring
 ```
-**output**:  
+**output:**  
 ![](/ImageryGG/img/example_3_1.png)  
 
 ### Image2text
-<img src=https://images.unsplash.com/photo-1559767949-0faa5c7e9992 height="200">
-
-**input**:  
+**input:**  
 ```text
 https://images.unsplash.com/photo-1559767949-0faa5c7e9992
 ```
-**output**:  
+**output:**  
 ```text
 Cape Cod house, gable roof, symmetrical design, double-hung windows, shutters, natural materials, stone, traditional aesthetic, rustic, wood siding, goose on pond
 ```
