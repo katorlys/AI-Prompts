@@ -1,38 +1,38 @@
-# Keep AI Bots Alive on Discord
-#   If no users interact with a bot in Discrod for more than a week, the bot will automatically go offline.
-#   This Github workflow automatically pings the AI chat bots developed by Katorly Lab every Sunday and Wednesday in the Katorly Lab Discord server to prevent them going offline.
+# # Keep AI Bots Alive on Discord
+# #   If no users interact with a bot in Discrod for more than a week, the bot will automatically go offline.
+# #   This Github workflow automatically pings the AI chat bots developed by Katorly Lab every Sunday and Wednesday in the Katorly Lab Discord server to prevent them going offline.
 
-name: "Keep AI Bots Alive on Discord"
-on:
-  schedule:
-    # Run at 16:00 every Sunday and Wednesday.
-    - cron: '0 16 * * 0,4'
-  workflow_dispatch:
+# name: "Keep AI Bots Alive on Discord"
+# on:
+#   schedule:
+#     # Run at 16:00 every Sunday and Wednesday.
+#     - cron: '0 16 * * 0,4'
+#   workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    name: Keep AI Bots developed by Katorly Lab alive on Discord
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     name: Keep AI Bots developed by Katorly Lab alive on Discord
 
-    steps:
-      - uses: actions/checkout@v2.5.0
-      # Store them in Github Repository Secrets to make them easy to change
-      # Use format `<@BotUserID> Hello!` to ping the bot (Do not remove the "<" ">"), or else the message will be plain text
-      - name: Ping UltimateGPT bot on Katorly Lab Discord
-        uses: cl8dep/action-discord@0.1
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK_CHAT }}
-          message: ${{ secrets.DISCORD_PING_ULTIMATEGPT }}
-      - name: Ping ImageryGG bot on Katorly Lab Discord
-        uses: cl8dep/action-discord@0.1
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK_DRAW }}
-          message: ${{ secrets.DISCORD_PING_IMAGERYGG }}
-      - name: Ping CodingGG bot on Katorly Lab Discord
-        uses: cl8dep/action-discord@0.1
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK_CODE }}
-          message: ${{ secrets.DISCORD_PING_CODINGGG }}
-      # Prevent workflow from being disabled after 60 days of inactivity of the current repository.
-      - name: Keep Github workflow alive
-        uses: gautamkrishnar/keepalive-workflow@v1
+#     steps:
+#       - uses: actions/checkout@v2.5.0
+#       # Store them in Github Repository Secrets to make them easy to change
+#       # Use format `<@BotUserID> Hello!` to ping the bot (Do not remove the "<" ">"), or else the message will be plain text
+#       - name: Ping UltimateGPT bot on Katorly Lab Discord
+#         uses: cl8dep/action-discord@0.1
+#         with:
+#           webhook: ${{ secrets.DISCORD_WEBHOOK_CHAT }}
+#           message: ${{ secrets.DISCORD_PING_ULTIMATEGPT }}
+#       - name: Ping ImageryGG bot on Katorly Lab Discord
+#         uses: cl8dep/action-discord@0.1
+#         with:
+#           webhook: ${{ secrets.DISCORD_WEBHOOK_DRAW }}
+#           message: ${{ secrets.DISCORD_PING_IMAGERYGG }}
+#       - name: Ping CodingGG bot on Katorly Lab Discord
+#         uses: cl8dep/action-discord@0.1
+#         with:
+#           webhook: ${{ secrets.DISCORD_WEBHOOK_CODE }}
+#           message: ${{ secrets.DISCORD_PING_CODINGGG }}
+#       # Prevent workflow from being disabled after 60 days of inactivity of the current repository.
+#       - name: Keep Github workflow alive
+#         uses: gautamkrishnar/keepalive-workflow@v1
